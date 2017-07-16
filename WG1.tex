@@ -1,24 +1,25 @@
 \newcommand{\MP}[1]{{ {\color{blue}{ [MP: #1]}} }}
 
-Short introduction.
-In the past years, the study of VBS from a theoretical point of view has attracted lots of interests \cite{Rauch:2016pai}.
+In the past years, the study of the VBS processes from a theoretical point of view has attracted lots of interests \cite{Rauch:2016pai}.
+This ranges from providing precise predictions in the Standard Model, to study of the polarisation of heavy gauge bosons in this process, and the infer possible effect of new physics.
+The program of the meeting reflects these three avenues.
 
 \subsection{Complete NLO corrections to ${\rm W^+ W^+}$ scattering - M. Pellen}
 
 The first VBS channel that has been observed during the run~I of the LHC is the same-sign WW one \cite{Aad:2014zda,Aaboud:2016ffv,Khachatryan:2014sta}.
 And for run~II, a measurement has already been performed by the CMS collaboration \cite{CMS:2017adb}.
-From a theoretical point of view, it is also the channel which has the smallest number of partonic channels.
+% From a theoretical point of view, it is also the channel which has the smallest number of partonic channels.
 Hence precise and appropriate theoretical predictions are needed to match the experimental measurements.
 
 MP: Paragraph to be added latter.
 
 Hence the EW corrections of order $\mathcal{O}\left(\alpha^7\right)$ are the dominant NLO contribution.
 These originate from Sudakov logarithms that grow negatively large in the high energy limit.
-Usually these are particularly large only in phase space regions where the  that are
-Hence the impact at the level of the total fiducial cross section is rather limited.
+Usually these are particularly large only in phase space regions which are suppressed.
+Hence the impact at the level of the total fiducial cross section is usually rather limited.
 This is not the case here where the corrections are already large at the level of the cross section and reach $-16\%$ \cite{Biedermann:2016yds}.
 The origin of these large EW corrections are indeed virtual corrections and in particular the ones corresponding to the insertion of massive particles in the scattering process \cite{Biedermann:2016yds}.
-As the EW corrections are particularly large, they could be measured at a high luminosity LHC, hence probe the EW sector of the Standard model.
+As the EW corrections are particularly large, it might be possible to measure them at a high luminosity LHC, hence probing the EW sector of the Standard Model to very high precision.
 
 \subsection{Monte Carlo comparisons for ${\rm W^+ W^+}$ scattering - M. Zaro}
 
@@ -42,7 +43,7 @@ In particular, it is very important to devise methods that allow for such studie
 Thus, a starting point is to establish these methods first for the Standard Model.
 In this respect, a new method has been proposed and applied to the scattering of two W bosons of opposite charge.
 
-First, in general, a matrix element squared can be written as
+First, a matrix element squared can be written in a general manner as
 
 \begin{equation}
 \label{eq:polarisation}
@@ -51,9 +52,9 @@ First, in general, a matrix element squared can be written as
 %
 where $\lambda$ represents the polarisation of the heavy gauge bosons.
 Usually the last term of Eq.~\eqref{eq:polarisation} is assumed to be zero.
-But this is only true when ones integrates over the full phase space in $\phi$.
+But this is only true when ones integrates over the full phase space over the variable $\phi$.
 In experiments, it is never the case as experimental measurements are never done fully inclusively.
-Indeed they always include event selection that cut into the available phase space and make the use of a full computation necessary.
+Indeed they always include event selections that cut into the phase space and make the use of a full computation necessary.
 
 Second, an amplitude can be divided into resonant and non-resonant contributions as
 
@@ -61,28 +62,28 @@ Second, an amplitude can be divided into resonant and non-resonant contributions
 \mathcal{A} = \mathcal{A}_{\rm res} + \mathcal{A}_{\rm non-res} .
 \end{equation}
 %
-But the issue is that non-resonant propagators cannot be interpreted as W production.
+But non-resonant propagators cannot be interpreted as W production.
 Hence, one should only retain the resonant part of the process.
-To achieve this in a gauge invariant one can use the double-pole approximation where only diagrams featuring a two W boson propagator will be selected.
+To achieve this in a gauge invariant way, one can use the double-pole approximation where only diagrams featuring a two W boson propagator are selected.
 This sub-set of diagrams is then evaluation with an on-shell kinematic.
 But on-shell kinematics are not unique so one should use an on-shell projection that should fulfil the following criteria:
 [To be added]
-In such a way, one can applied a given polarisation to the W bosons in a gauge invariant manner.
+In such a way, one can set a given polarisation to the W bosons in a gauge invariant manner.
 
 Moving on to the results.
 In order to be able to integrate fully over the variable $\phi$, one should consider a typical VBS event selection but without any cuts on the final state leptons.
-If one consider a ${\rm W^-}$ polarised and a ${\rm W^-}$ non-polarised, one observes that the effect of the (second term of Eq.~\eqref{eq:polarisation}) is below one per cent at the level of the total cross section.
+If one consider a ${\rm W^-}$ polarised and a ${\rm W^-}$ non-polarised, one observes that the effect of the interferences between different polarisations (second term of Eq.~\eqref{eq:polarisation}) is below one per cent at the level of the total cross section.
 At the level of differential distributions which do not depend on decay product of the W bosons, the same holds.
-Nonetheless, looking at transverse momentum of the leptons of the angle $phi$ of the electron, large differences arise.
+Nonetheless, looking at transverse momentum of the leptons of the angle $\phi$ of the electron, large differences arise.
 Also, looking at the polarisation fraction: results of the polarisation obtained with Legendre analysis [citation?] and through direct computation agree.
 
-Turning now to a set-up where one applied cuts on the transverse momentum and rapidity of the final state leptons, the situation is changing drastically.
+Turning now to a set-up where one also applied cuts on the transverse momentum and rapidity of the final state leptons, the situation is changing drastically.
 At the level of the cross section and distribution involving non W decay products, the effect is rather limited (about $2\%$).
 But one can observe big differences when looking at polarisation fraction.
 
 This analysis demonstrate that one can analysis the polarisation of massive gauge bosons in a well defined set-up for vector boson scattering.
 This study has been done for the Standard Model but could be in principle extended to any new physics model.
-This method will soon be public in the code Phantom [citation?]. \\
+The implementation of this method will soon be public in the code Phantom [citation?]. \\
 MP: Plans for the future?
 
 \subsection{Effective Field theory for vector-boson scattering - I. Brivio}
@@ -90,51 +91,41 @@ MP: Plans for the future?
 As mentioned briefly before, VBS processes could be a particularly interesting type of signature for probing new physics effects.
 In this respect, EFT methods provide a proxy to test the presence of new physics in a model independent way.
 
-One of the EFT framework is the so-called Standard Model EFT (SMEFT) which consist of adding all the dimension 6 operators to the Standard M ones.
+One of the EFT framework is the so-called Standard Model EFT (SMEFT) which consist of adding all the dimension$-6$ operators to the Standard Model ones.
 This can be sketched as
 %
 \begin{equation}
  \mathcal{L}_{\rm SMEFT} = \mathcal{L}_{\rm SM} + \mathcal{L}_{\rm dim-6},
 \end{equation}
 %
-where $\mathcal{L}$ denotes the respective Lagrangian.
+where $\mathcal{L}$ denotes the respective Lagrangians.
 In particular, one should always consider all possible operators and not only a sub-set of them.
-Indeed, doing this could lead to a violation of gauge invariant which would lead to an un-physical results.
+Indeed, doing this could lead to a violation of gauge invariant which would result in un-physical results.
 For vector boson scattering, 20 of these dimension$-6$ operators are relevant for vector-boson scattering.
-This constitute a large number of operators to be fitted simultaneously but one should avoid to set some of them to zero.
+This constitute a large number of operators to be fitted simultaneously but one should avoid to set some of them to zero (in order not to violate gauge invariance).
 
-An issue arising when using EFT is that it is not clear a priori to state in what range it can be applied.
-In particular, VBS processes are particularly complex with various scale entering at different stage in the process.
-Hence, this required a detailed analysis a posteriori of the validity of the EFT.
-Some methods are already present [citation] and could probably be in VBS studies.
+An issue arising when using EFT is that it is not clear a priori in what range it can be applied.
+In particular, VBS processes are particularly complex with various scale entering at different stage in the (sub-)process(es).
+Hence, this requires a detailed analysis a posteriori of the validity of the EFT.
+Some methods are already present [citation] and could also be applied to VBS studies.
 
 Also, it is not clear if EFT are of any use when one need to use unitarisation.
 This seems not to be the case.
 
 Dimension$-6$ operators are probably the first type of operators to be studied (the simplest).
-Nonetheless, for VBS processes, it could be that dimension$-6$ operators could also be relevant.
+Nonetheless, for VBS processes, it could be that dimension$-8$ operators could also be relevant.
 The reason for this is that VBS processes involve mainly gauge bosons.
 
+Concerning the basis for the dim-$6$ operators, none of them is preferred.
+Indeed, from a theoretical point of view, any complete basis can describe all the operator equivalently.
+Nonetheless, the Warsaw basis [citation?] is widely used as its renormalisation group evolution (RGE) is completely known [citation?].
 
+Finally, the hope is to have better than $10\%$ experimental precision in order to obtain sensitivity to possible new physics contributions.
+Hence, if a fit of all the relevant operators would lead to some non-zero coefficients, this could be a smocking gun for new physics.
+This would then open the possibility to characterising these new physics effects that might lead to finding a new resonance through direct searches.
 
-preferred basis: no from theory but popular Warsaw one.
-advantages for technical reasons + complete RGE evolution.
-
-To get constraints, you should have 10% precision -> hard for now
-
-If a EFT coefficient is non-zero -> NP and might even tell about what is the underlying theory
-first step but you want always to find the resonance!
-
-Plan:
-1. exp. constraints on EFT
-- parametrisaiton for dim=6 (for a start, dim=8 is hard)
-- UFO model -> test?
-- SMEFT vs. HEFT
-- other data set?
-
-2. report data: flexible/model-independent
-cross-section
-distributions
-
-HEFT: non-linear EFT
-interesting in some cases
+But for now, the plan for the next months will be to study the experimental constraints one can obtain on EFT.
+For this, one should agree on a given parametrisation of dimension$-6$ operators (for a start as it is simpler than dimension$-8$ operators).
+Then it would be useful to list and test the possible theoretical tools that can provide such predictions.
+Once this has been done, it would be interesting to look at whether other data set than the ones of the VBS process could be more lead to more stringent constraints.
+In this regard, it will probably be very useful to think about ways to present data (cross sections, differential distributions) so that they can be use simply by theorists.
