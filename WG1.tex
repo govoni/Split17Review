@@ -1,15 +1,18 @@
 \newcommand{\MP}[1]{{ {\color{blue}{ [MP: #1]}} }}
 
-In the past years, the study of the VBS processes from a theoretical point of view has attracted lots of interests \cite{Rauch:2016pai}.
-This ranges from providing precise predictions in the Standard Model, to study of the polarisation of heavy gauge bosons in this process, and the infer possible effect of new physics.
-The program of the meeting reflects these three avenues.
+In the past years, the study of the VBS processes has attracted lots of interests from the theory commununity, (see e.g. the review~\cite{Rauch:2016pai}).
+The acivities range from providing precise predictions for the VBS signal and background processes in the Standard Model, to studying the sensitivity of these 
+processes on new physics effects, by mean of effective theories or studying the polarisation pattern of the heavy 
+gauge bosons involved.
+The program of the meeting reflects these avenues.
 
 \subsection{Complete NLO corrections to ${\rm W^+ W^+}$ scattering - M. Pellen}
 
-The first VBS channel that has been observed during the run~I of the LHC is the same-sign WW one \cite{Aad:2014zda,Aaboud:2016ffv,Khachatryan:2014sta}.
-And for run~II, a measurement has already been performed by the CMS collaboration \cite{CMS:2017adb}.
+The first VBS process that has been observed during the run~I of the LHC is the same-sign WW production~\cite{Aad:2014zda,Aaboud:2016ffv,Khachatryan:2014sta}.
+This observation has already been confirmed by the CMS collaboration at the 13 TeV run~II~\cite{CMS:2017adb}.
 % From a theoretical point of view, it is also the channel which has the smallest number of partonic channels.
-Hence precise and appropriate theoretical predictions are needed to match the experimental measurements.
+In view of the growing mole of data which will be collected by the experiments, and of the consequent reduction of the uncertainties affecting these measurements, 
+precise theoretical predictions become necessary.
 
 MP: Paragraph to be added latter.
 
@@ -22,18 +25,58 @@ The origin of these large EW corrections are indeed virtual corrections and in p
 As the EW corrections are particularly large, it might be possible to measure them at a high luminosity LHC, hence probing the EW sector of the Standard Model to very high precision.
 
 \subsection{Monte Carlo comparisons for ${\rm W^+ W^+}$ scattering - M. Zaro}
+In the last decade many codes capable of performing VBS simulations have appeared; within a network such as VBSCan, it is therefore natural to perform 
+a quantitative comparison of these codes, both to cross-validate the results and to assess the impact of the different approximations which are performed in each tool. In fact, 
+already at the LO, when the process $p p \to e^+ \nu_e \mu^+ \nu_\mu j j$ at $\mathcal O (\alpha^6)$ is considered, the various implementations of VBS differ, for example
+by the (non-)inclusion of diagrams with vector bosons in the $s$-channel or by the treatment of interferences between diagrams; the reason of these differences is that, 
+when typical signal cuts for VBS are imposed, these effects turn to be totally negligible on rates and distributions.
 
-- Citations of all the codes with name of people who ran the codes \\
-Recola \cite{Actis:2012qn,Actis:2016mpe} which is based on the Collier \cite{Denner:2014gla,Denner:2016kdg} library.
-MoCaNLO is a multi-channel Monte Carlo program. \\
-- Description of the approximations and the table with the codes \\
-- Perfect agreement at LO \\
-- It seems that the VBS approximation is working well at the level of the cross section and differential distributions. \\
+In our comparison, we use the following codes: {\bf ADD/CHECK CITES} 
+{\sc Bonsay}~\cite,
+{\sc MadGraph5\_aMC@NLO}~\cite{Alwall:2014hca}, 
+{\sc Powheg}~\cite{},
+{\sc Recola+Collier}~\cite{Actis:2012qn,Actis:2016mpe,Denner:2014gla,Denner:2016kdg},
+{\sc VBFNLO}~\cite{Arnold:2008rz, Arnold:2011wj, Baglio:2014uba}.
+The complete comparison of the codes will be published in a separate work. Here, we present some preliminary results obtained at LO ($\mathcal O (\alpha^6)$) and including
+NLO QCD corrections at fixed-order ($\mathcal O (\alpha^6\alpha_s)$, for the process $p p \to e^+ \nu_e \mu^+ \nu_\mu j j$. In 
+Tab.~\ref{tab:wg1_codes} we report on the details of the various codes. In particular, we check whether
+\begin{itemize}
+    \item all $s-$ and $t/u-$channel diagrams that lead to the considered final state are included;
+    \item interferences between diagrams are included at LO;
+    \item off-shell contributions and diagrams which do not feature two resonant vector bosons are included;
+    \item the so-called ``non-factorizable'' (NF) QCD corrections, that is those corrections where (real or virtual) gluons are exchanged between different quark lines,
+        are included;
+    \item EW corrections to the $\mathcal O (\alpha^5\alpha_s)$ interference are included. These corrections are of the same order as the NLO QCD corrections to
+        the  $\mathcal O (\alpha^6$ term.
+\end{itemize}
+%
+\begin{table}
+    \footnotesize
+    \begin{tabularx}{\textwidth}{c|c|X|X|X|X|X}
+        Contact person  &  Code  &  $\mathcal O(\alpha^6)$ $|s|^2/$ $|t|^2/|u|^2$  &  $\mathcal O(\alpha^6)$ interf.  &  Off-shell  &  NF QCD  &  EW corr. to $\mathcal O(\alpha^5\alpha_s)$  \\
+        \hline
+        \hline
+        A. Karlberg  &  {\sc POWHEG}  &  $t/u$  &  No  &  Yes  &  No  &  No  \\
+        M. Pellen    &  {\sc Recola}  &  Yes  &  Yes  &  Yes  &  Yes  &  Yes  \\
+        M. Rauch     &  {\sc VBFNLO}  &  Yes  &  No  &  Yes  &  No  &  No  \\
+        C. Schwan    &  {\sc BONSAY}  &  $t/u$  &  No  &  Yes, virt. No  &  No  &  No  \\
+        M. Zaro      &  {\sc MG5\_aMC}  &  Yes  &  Yes  &  No virt.  &  No  &  No
+    \end{tabularx}
+    \caption{\label{tab:wg1_codes} Summary of the different properties of the codes employed in the comparison.}
+\end{table}
+%
+INPUT AND SETUP\\
+VBS CUTS\\
+PLOTS\\
+The results of our comparison show an excellent agreement of the different tools at LO, which justify the approximations made in some of these tools not to include certain 
+contributions. At NLO, slightly larger (but still below $10\%$) effects can be noticed for example at low dijet invariant mass, where $s-$ channels and interferences are not
+as much suppressed as at LO, because of real QCD radiation.
 
-The results presented are only preliminary results.
-In the coming months, this work will be enlarge to include comparison of predictions at NLO QCD matched to parton shower.
-The QCD induced background will also studied in the same manner.
-Finally, NLO EW corrections will be also included as they turn out to be large.
+
+We conclude this session by recalling that the results presented must be regarded as preliminary.
+In the coming months, this work will be enlarged to include comparison of predictions at NLO QCD matched to parton shower or with EW corrections, 
+as well as to study the effect of changing 
+the VBS cuts. The QCD-induced background will also be studied.
 
 \subsection{Polarisation of vector bosons - E. Maina}
 
