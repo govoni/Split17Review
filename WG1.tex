@@ -1,33 +1,147 @@
-\newcommand{\MP}[1]{{ {\color{blue}{ [MP: #1]}} }}
 
-In the past years, the study of the VBS processes has attracted lots of interests from the theory commununity, (see e.g. the review~\cite{Rauch:2016pai}).
+In the past years, the study of the VBS processes has attracted lots of interests from the theory community, (see {\emph e.g.} the review~\cite{Rauch:2016pai}).
 The acivities range from providing precise predictions for the VBS signal and background processes in the Standard Model, to studying the sensitivity of these 
-processes on new physics effects, by mean of effective theories or studying the polarisation pattern of the heavy 
-gauge bosons involved.
+processes on new physics effects, by mean of effective theories or by studying the polarisation patterns of the heavy gauge bosons involved.
 The program of the meeting reflects these avenues.
 
 \subsection{Complete NLO corrections to ${\rm W^+ W^+}$ scattering - M. Pellen}
 
 The first VBS process that has been observed during the run~I of the LHC is the same-sign WW production~\cite{Aad:2014zda,Aaboud:2016ffv,Khachatryan:2014sta}.
-This observation has already been confirmed by the CMS collaboration at the 13 TeV run~II~\cite{CMS:2017adb}.
-% From a theoretical point of view, it is also the channel which has the smallest number of partonic channels.
-In view of the growing mole of data which will be collected by the experiments, and of the consequent reduction of the uncertainties affecting these measurements, 
-precise theoretical predictions become necessary.
+This observation has already been confirmed by a measurement of the CMS collaboration at the 13 TeV run~II~\cite{CMS:2017adb}.
+In view of the growing mole of data which will be collected by the experiments, and of the consequent reduction of the uncertainties affecting these measurements, precise theoretical predictions become necessary.
 
-MP: Paragraph to be added latter.
+In that respect NLO QCD and EW corrections to such signature should be computed.
+So far, NLO have focused on NLO QCD corrections to the VBS process~\cite{Jager:2009xx,Jager:2011ms,Denner:2012dz,Rauch:2016pai} and its QCD-induced irreducible background process~\cite{Melia:2010bm,Melia:2011gk,Campanario:2013gea,Baglio:2014uba,Rauch:2016pai}.
+No NLO EW have been computed and the NLO QCD corrections relied on the so-called VBS approximation.
+In Refs.~\cite{Biedermann:2016yds,Biedermann:2017bss}, for the first, all leading order (LO) and next-to-leading (NLO) contributions to the full ${\rm p}{\rm p}\to\mu^+\nu_\mu{\rm e}^+\nu_{\rm e}{\rm j}{\rm j}$ process have been reported.
+As the full amplitudes are used, this amounts to compute three LO contributions and four NLO contributions.
+At LO, the three contributions are the EW process (order $\mathcal{O}{\left(\alpha^{6}\right)}$), its QCD-induced counterpart (order $\mathcal{O}{\left(\alpha_{\rm s}\alpha^{5}\right)}$) as well as the interference (order $\mathcal{O}{\left(\alpha_{\rm s}^2\alpha^{4}\right)}$).
+Due to the VBS event selection applied to the final state, the full process is dominated by the purely EW contribution (see Table~\ref{table:LOVBS}).
+This EW contribution feature the VBS diagrams but also background diagrams where for example the W bosons are simply radiated from the quark lines.
 
-Hence the EW corrections of order $\mathcal{O}\left(\alpha^7\right)$ are the dominant NLO contribution.
+\begin{table}
+\begin{center}
+\begin{tabular}{|l||c|c|c||c|}
+\hline
+Order & $\mathcal{O}{\left(\alpha^{6}\right)}$ & $\mathcal{O}{\left(\alpha_{\rm s}\alpha^{5}\right)}$ & $\mathcal{O}{\left(\alpha_{\rm s}^2\alpha^{4}\right)}$ & Sum \\
+\hline
+\hline
+${\sigma_{\mathrm{LO}}}$ [fb] 
+& $1.4178(2)$
+& $0.04815(2)$
+& $0.17229(5)$
+& $1.6383(2)$ \\
+\hline
+\end{tabular}
+\end{center}
+\caption{
+Fiducial cross section~\cite{Biedermann:2017bss} at LO for the process ${\rm p}{\rm p}\to\mu^+\nu_\mu{\rm e}^+\nu_{\rm e}{\rm j}{\rm j}$, at
+orders  $\mathcal{O}{\left(\alpha^{6}\right)}$, $\mathcal{O}{\left(\alpha_{\rm s}\alpha^{5}\right)}$, and $\mathcal{O}{\left(\alpha_{\rm s}^2\alpha^{4}\right)}$.
+The sum of all the LO contributions is in the last column and all contributions expressed in femtobarn. 
+The statistical uncertainty from the Monte Carlo integration on the last digit is given in parenthesis.}
+\label{table:LOVBS}
+\end{table}
+
+At NLO, the four contributions arise at the orders $\mathcal{O}{\left(\alpha^{7}\right)}$, $\mathcal{O}{\left(\alpha_{\rm s}\alpha^{6}\right)}$, $\mathcal{O}{\left(\alpha_{\rm s}^{2}\alpha^{5}\right)}$, and $\mathcal{O}{\left(\alpha_{\rm s}^{3}\alpha^{4}\right)}$. 
+An interesting feature is that the orders $\mathcal{O}{\left(\alpha_{\rm s}\alpha^{6}\right)}$ and $\mathcal{O}{\left(\alpha_{\rm s}^{2}\alpha^{5}\right)}$ receive both EW and QCD corrections.
+Thus, at NLO (as opposed to LO) it is not possible to strictly distinguish the EW process from the QCD-induced process.
+As it can be seen from Table~\ref{table:NLOVBS}, at the level of the fiducial cross section, the largest corrections are the one of order $\mathcal{O}{\left(\alpha^{7}\right)}$.
+These are the NLO EW corrections to the EW processes.
+
+\begin{table}
+\begin{center}
+\begin{tabular}{|l||c|c|c|c||c|}
+\hline
+Order & $\mathcal{O}{\left(\alpha^{7}\right)}$ & $\mathcal{O}{\left(\alpha_{\rm s}\alpha^{6}\right)}$ & $\mathcal{O}{\left(\alpha_{\rm s}^{2}\alpha^{5}\right)}$ & $\mathcal{O}{\left(\alpha_{\rm s}^{3}\alpha^{4}\right)}$ & Sum \\
+\hline
+\hline 
+${\delta \sigma_{\mathrm{NLO}}}$ [fb] 
+& $-0.2169(3)$ 
+& $-0.0568(5)$
+& $-0.00032(13)$
+& $-0.0063(4)$ 
+& $-0.2804(7)$ \\
+\hline
+$\delta \sigma_{\mathrm{NLO}}/\sigma_{\rm LO}$ [\%] & $-13.2$ & $-3.5$ & $0.0$ & $-0.4$ & $-17.1$ \\
+\hline
+\end{tabular}
+\end{center}
+\caption{
+NLO corrections~\cite{Biedermann:2017bss} for the process ${\rm p}{\rm p}\to\mu^+\nu_\mu{\rm e}^+\nu_{\rm e}{\rm j}{\rm j}$ at the orders 
+$\mathcal{O}{\left(\alpha^{7}\right)}$, $\mathcal{O}{\left(\alpha_{\rm s}\alpha^{6}\right)}$, $\mathcal{O}{\left(\alpha_{\rm s}^{2}\alpha^{5}\right)}$, and $\mathcal{O}{\left(\alpha_{\rm s}^{3}\alpha^{4}\right)}$.
+The sum of all the NLO contributions is in the last column.
+The contribution $\delta\sigma_{\mathrm{NLO}}$ corresponds to the absolute correction while $\delta \sigma_{\mathrm{NLO}}/\sigma_{\rm LO}$ gives the relative correction normalised to the sum of all LO contributions.
+The absolute contributions are expressed in femtobarn while the relative ones are expressed in per cent.
+The statistical uncertainty from the Monte Carlo integration on the last digit is given in parenthesis.}
+\label{table:NLOVBS}
+\end{table}
+
+All these different contributions can also be seen in two differential distributions in the the transverse momentum for the hardest jet and invariant mass for the two leading jets in Fig.~\ref{fig:VBSALL}.
+Each contribution (both LO and NLO) shows distinctive features.
+At LO, the QCD induced process as well as the interference are rather suppressed due to the typical VBS event selection (as for the fiducial cross section).
+This is exemplified in the invariant mass of the two leading jet where at high invariant mass, the QCD-induced background becomes negligible.
+At NLO, the bulk of the corrections originate from the large EW to the EW process at order $\mathcal{O}{\left(\alpha^{7}\right)}$.
+In particular they display the typical behaviour of Sudakov logarithms that grow large in the high energy limit.
+Note that the contribution from initial state photon is also shown but is not taken into account in the definition of the NLO predictions.
+This contribution is rather small and fairly constant in shape over the whole range studied here.
+Finally, as at NLO, in it is not possible to isolate the EW production from its irreducible backgrounds, a global measurement of the process full ${\rm p}{\rm p}\to\mu^+\nu_\mu{\rm e}^+\nu_{\rm e}{\rm j}{\rm j}$ with all component is desirable.
+Hence in Fig.~\ref{fig:VBSAAL_sum}, the sum all the contributions at both LO and NLO is shown in a combined prediction.
+
+\begin{figure}
+% \hspace{-2cm}
+\includegraphics[width=.47\textwidth]{WG1_plots/histogram_transverse_momentum_j1}
+\hfill
+\includegraphics[width=.47\textwidth]{WG1_plots/histogram_invariant_mass_mjj12}
+% \vspace*{-1em}
+\caption{Differential distributions~\cite{Biedermann:2017bss} for ${\rm p}{\rm p}\to\mu^+\nu_\mu{\rm e}^+\nu_{\rm e}{\rm j}{\rm j}$:
+transverse momentum for the hardest jet~(left) and invariant mass for the two leading jets~(right).
+The two lower panels show the relative NLO corrections with respect to the full LO in per cent,
+defined as $\delta_i = \delta \sigma_{i} / \sum \sigma_{\text{LO}}$, 
+where $i=\mathcal{O}{\left(\alpha^{7}\right)},\mathcal{O}{\left(\alpha_{\rm s}\alpha^{6}\right)},\mathcal{O}{\left(\alpha_{\rm s}^2\alpha^{5}\right)},\mathcal{O}{\left(\alpha_{\rm s}^3\alpha^{4}\right)}$.
+In addition, the NLO photon-induced contributions of order $\mathcal{O}{\left(\alpha^{7}\right)}$ is provided separately.}
+\label{fig:VBSALL}
+\end{figure}
+
+\begin{figure}
+% \hspace{-2cm}
+\includegraphics[width=.47\textwidth]{WG1_plots/histogram_invariant_mass_epmu_scale}
+\hfill
+\includegraphics[width=.47\textwidth]{WG1_plots/histogram_rapidity_separation_pomu_scale}
+% \vspace*{-1em}
+\caption{Differential distributions~\cite{Biedermann:2017bss} for ${\rm p}{\rm p}\to\mu^+\nu_\mu{\rm e}^+\nu_{\rm e}{\rm j}{\rm j}$:
+invariant mass of the positron and anti-muon system~(left) and rapidity separation between the electron and anti-muon~(right).
+The upper panels show the sum of all LO and NLO contributions with scale variation.
+The lower panels show the relative corrections in per cent.}
+\label{fig:VBSAAL_sum}
+\end{figure}
+
+As shown previously, the EW corrections of order $\mathcal{O}\left(\alpha^7\right)$ are the dominant NLO contributions.
 These originate from Sudakov logarithms that grow negatively large in the high energy limit.
-Usually these are particularly large only in phase space regions which are suppressed.
+This is shown in the differential distribution in the transverse momentum of the hardest jet on the left hand-side of Fig.~\ref{fig:VBSEW}.
+Usually these EW corrections are particularly large only in phase space regions which are suppressed.
 Hence the impact at the level of the total fiducial cross section is usually rather limited.
 This is not the case here where the corrections are already large at the level of the cross section and reach $-16\%$ \cite{Biedermann:2016yds}.
 The origin of these large EW corrections are indeed virtual corrections and in particular the ones corresponding to the insertion of massive particles in the scattering process \cite{Biedermann:2016yds}.
+Hence, large NLO EW corrections are an intrinsic feature of VBS at the LHC.
 As the EW corrections are particularly large, it might be possible to measure them at a high luminosity LHC, hence probing the EW sector of the Standard Model to very high precision.
+This is illustrated on the left hand-side of Fig.~\ref{fig:VBSEW} where the band represent the estimated statistical error for a high-luminosity LHC collecting $3000{\rm fb}^{-1}$.
+
+\begin{figure}
+% \hspace{-2cm}
+\includegraphics[width=.47\textwidth]{WG1_plots/histogram_transverse_momentum_j1_ew}
+\includegraphics[width=.47\textwidth]{WG1_plots/histogram_rapidity_j1j2_ew}
+% \vspace*{-1em}
+\caption{Differential distributions~\cite{Biedermann:2016yds} for ${\rm p}{\rm p}\to\mu^+\nu_\mu{\rm e}^+\nu_{\rm e}{\rm j}{\rm j}$ including NLO EW corrections (upper panel) and relative NLO EW corrections (lower panel).
+Left plot: Invariant-mass distribution of the four leptons.
+Right plot: Rapidity distribution of the leading jet pair.
+The yellow band describes the expected statistical experimental uncertainty for a high-luminosity LHC collecting $3000{\rm fb}^{-1}$ and represents a relative variation of $\pm 1/\sqrt{N_{\rm obs}}$ where $N_{\rm obs}$ is the number of observed events in each bin.}
+\label{fig:VBSEW}
+\end{figure}
 
 \subsection{Monte Carlo comparisons for ${\rm W^+ W^+}$ scattering - M. Zaro}
 In the last decade many codes capable of performing VBS simulations have appeared; within a network such as VBSCan, it is therefore natural to perform 
 a quantitative comparison of these codes, both to cross-validate the results and to assess the impact of the different approximations which are performed in each tool. In fact, 
-already at the LO, when the process $p p \to e^+ \nu_e \mu^+ \nu_\mu j j$ at $\mathcal O (\alpha^6)$ is considered, the various implementations of VBS differ, for example
+already at the LO, when the process ${\rm p}{\rm p}\to\mu^+\nu_\mu{\rm e}^+\nu_{\rm e}{\rm j}{\rm j}$ at $\mathcal O (\alpha^6)$ is considered, the various implementations of VBS differ, for example
 by the (non-)inclusion of diagrams with vector bosons in the $s$-channel or by the treatment of interferences between diagrams; the reason of these differences is that, 
 when typical signal cuts for VBS are imposed, these effects turn to be totally negligible on rates and distributions.
 
@@ -35,10 +149,10 @@ In our comparison, we use the following codes: {\bf ADD/CHECK CITES}
 {\sc Bonsay}~\cite,
 {\sc MadGraph5\_aMC@NLO}~\cite{Alwall:2014hca}, 
 {\sc Powheg}~\cite{},
-{\sc Recola+Collier}~\cite{Actis:2012qn,Actis:2016mpe,Denner:2014gla,Denner:2016kdg},
+{\sc Recola+MoCaNLO}~\cite{Actis:2012qn,Actis:2016mpe,MoCaNLO}\footnote{To numerically evaluate the one-loop scalar and tensor integrals, {\sc Recola} relies on the {\sc Collier} library \cite{Denner:2014gla,Denner:2016kdg}},
 {\sc VBFNLO}~\cite{Arnold:2008rz, Arnold:2011wj, Baglio:2014uba}.
 The complete comparison of the codes will be published in a separate work. Here, we present some preliminary results obtained at LO ($\mathcal O (\alpha^6)$) and including
-NLO QCD corrections at fixed-order ($\mathcal O (\alpha^6\alpha_s)$, for the process $p p \to e^+ \nu_e \mu^+ \nu_\mu j j$. In 
+NLO QCD corrections at fixed-order ($\mathcal O (\alpha^6\alpha_s)$, for the process ${\rm p}{\rm p}\to\mu^+\nu_\mu{\rm e}^+\nu_{\rm e}{\rm j}{\rm j}$. In 
 Tab.~\ref{tab:wg1_codes} we report on the details of the various codes. In particular, we check whether
 \begin{itemize}
     \item all $s-$ and $t/u-$channel diagrams that lead to the considered final state are included;
