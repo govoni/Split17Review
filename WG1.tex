@@ -244,45 +244,45 @@ The implementation of this method will soon be public in the code Phantom [citat
 MP: Plans for the future?
 
 \subsection{Effective Field theory for vector-boson scattering - I. Brivio}
+VBS processes represent a particularly interesting probe of new physics, as they give a unique access to the couplings of gauge bosons.
+Without committing to a specific model, a convenient instrument for testing experimental data against the presence of beyond the Standard Model (BSM) effects is that of Effective Field Theories (EFTs).
 
-As mentioned briefly before, VBS processes could be a particularly interesting type of signature for probing new physics effects.
-In this respect, EFT methods provide a proxy to test the presence of new physics in a model independent way.
-
-One of the EFT framework is the so-called Standard Model EFT (SMEFT) which consist of adding all the dimension$-6$ operators to the Standard Model ones.
-This can be sketched as
-%
+In the EFT approach, the Standard Model (SM) is assumed to be the low energy limit of an unknown UV completion, whose typical scale $\Lambda$ is well separated from the electroweak one. In this scenario the new physics sector is decoupled and its impact onto observables measured at $E\sim v$ can be parameterized without specifying any property of the UV completion, by means of a Lagrangian that contains only the SM fields and respects the SM symmetries. New physics effects are organized in a Taylor expansion in $E/\Lambda$, i.e. they are encoded in an infinite series of gauge-invariant operators ordered by their canonical dimension.
+This is often called SMEFT Lagrangian and, neglecting lepton number violating terms, it reads
 \begin{equation}
- \mathcal{L}_{\rm SMEFT} = \mathcal{L}_{\rm SM} + \mathcal{L}_{\rm dim-6},
-\end{equation}
+ \mathcal{L}_{\rm SMEFT} = \mathcal{L}_{\rm SM} + \frac{1}{\Lambda^2}\mathcal{L}_{\rm dim-6} + \frac{1}{\Lambda^4}\mathcal{L}_{\rm dim-8} + \dots
+\end{equation} 
+with the dots standing for higher orders.
+The SMEFT Lagrangian constitutes a convenient theoretical tool for probing the presence of new physics, as it provides the only systematic and model-independent parameterization of new physics effects that can be matched onto any UV completion compatible with the SM symmetries and field content.
+
+We can restrict to leading deviations from the SM, cutting the series at dimension 6:
+\begin{equation}
+ \mathcal{L}_{\rm dim-6} = \sum_i C_i \mathcal{O}_i\,.
+\end{equation} 
+Here $\{\mathcal{O}_i\}$ is a set of gauge-invariant dimension-6 operators that form a complete basis and $\{C_i\}$ are the corresponding Wilson coefficients.
 %
-where $\mathcal{L}$ denotes the respective Lagrangians.
-In particular, one should always consider all possible operators and not only a sub-set of them.
-Indeed, doing this could lead to a violation of gauge invariant which would result in un-physical results.
-For vector boson scattering, 20 of these dimension$-6$ operators are relevant for vector-boson scattering.
-This constitute a large number of operators to be fitted simultaneously but one should avoid to set some of them to zero (in order not to violate gauge invariance).
+Any evidence for a non-zero Wilson coefficient would represent a smoking gun of new physics. Further, knowing which terms are non-vanishing can allow to characterize the new physics states and help designing more effective direct search strategies.
 
-An issue arising when using EFT is that it is not clear a priori in what range it can be applied.
-In particular, VBS processes are particularly complex with various scale entering at different stage in the (sub-)process(es).
-Hence, this requires a detailed analysis a posteriori of the validity of the EFT.
-Some methods are already present [citation] and could also be applied to VBS studies.
 
-Also, it is not clear if EFT are of any use when one need to use unitarisation.
-This seems not to be the case.
+A complete basis for dimension-6 terms contains 59 independent structures that in complete generality are associated to 2499 independent parameters~\cite{Alonso:2013hga}. This number can be significantly reduced for example assuming CP conservation and/or an approximate flavor symmetry $U(3)^5$. Choosing convenient kinematic cuts in the experimental measurements can also help to restrict the set of relevant operators.
+%
+Different basis choices for $\mathcal{L}_{\rm dim-6}$ have been proposed in the literature, that are related by equation-of-motion and integration-by-parts transformations. 
+Despite containing different sets of operators (often distributing the effects differently among fermions and bosons couplings!), all the bases give equivalent parameterizations for physical $S$-matrix elements, i.e. once a complete process with stable external states is computed. 
+The so-called Warsaw basis~\cite{Grzadkowski:2010es} is sometimes preferred, however, due to the fact that this was the first complete basis in the literature and that its renormalisation group evolution (RGE) is completely known~\cite{Jenkins:2013zja,Jenkins:2013wua,Alonso:2013hga,Grojean:2013kd,Alonso:2014zka}.
 
-Dimension$-6$ operators are probably the first type of operators to be studied (the simplest).
-Nonetheless, for VBS processes, it could be that dimension$-8$ operators could also be relevant.
-The reason for this is that VBS processes involve mainly gauge bosons.
+\vskip 1em
+Assuming CP conservation and a $U(3)^5$ flavor symmetry, VBS processes receive corrections from 16 dimension-6 operators. To keep the analysis as general as possible, these should be all considered simultaneously in the fit. Setting a subset of the Wilson coefficients to zero cannot be done freely as, for example, this may spoil strong correlations hidden in the parameterization and artificially remove blind directions\footnote{From a theoretical point of view, removing operators ``by hand'' is problematic because a given basis is a minimal set in which a vast amount of redundant structures have already been systematically removed. This means that each operator retained in the basis does not simply account for corrections to the couplings that it contains, but also to those contained in other structures related to it e.g. by equations of motion, that have been removed. This happens in a non-intuitive way, which is hard to control a posteriori: for instance in the Warsaw basis some operators affecting TGCs are traded for a specific combination of fermionic + Higgs terms, which are apparently unrelated to the self-couplings of the gauge bosons.}. 
+A reduction of the number of parameters may be necessary, nonetheless, for the technical feasibility of the analysis. In this case the removal of some (combination of) operators may be  very carefully considered in the future.
 
-Concerning the basis for the dim-$6$ operators, none of them is preferred.
-Indeed, from a theoretical point of view, any complete basis can describe all the operator equivalently.
-Nonetheless, the Warsaw basis [citation?] is widely used as its renormalisation group evolution (RGE) is completely known [citation?].
+The possibility of extending the EFT analysis with dimension-8 operators has also been discussed, as these terms can introduce important decorrelation effects between triple and quartic gauge couplings. Although this is an interesting avenue, exploring it in a consistent way is a challenging task due to the extremely large number of parameters involved and to the fact that a complete basis of dimension 8 operators is not available to date. Therefore it is advisable to defer this study to a later stage. A more compelling alternative is rather performing an analysis in the basis of the Higgs EFT (HEFT), for which complete bases have been presented in Refs.~\cite{Buchalla:2013rka,Brivio:2016fzo} (see references therein for further theoretical details and previous phenomenological studies). The HEFT differs from the SMEFT in that it is not constructed with the Higgs doublet, but rather embedding the Goldstone fields into a dimensionless matrix $\mathbf{U}=\exp(i\pi^a\sigma^a/v)$ (analogously to the pion fields in chiral perturbation theory) and treating the physical Higgs as a gauge singlet. The HEFT is more general than the SMEFT and it is matched, for instance, by theories with a strongly interacting electroweak symmetry breaking sector in the UV, such as composite Higgs models. Such an analysis would be highly motivated as the scattering of longitudinal gauge bosons constitute one of the best probes for UV scenarios matching the HEFT (see e.g.~\cite{Delgado:2013hxa,Delgado:2014jda} for recent studies), and they are among the observables that may allow to disentangle it from the SMEFT. The number of relevant Wilson coefficients for VBS is the HEFT (in the CP conserving, 4$U(3)^5$ symmetric limit) is about 30, which is larger than for the SMEFT but much lower than for including a complete dimension-8 set of operators, which makes this analysis an ideal follow-up to the SMEFT one.
 
-Finally, the hope is to have better than $10\%$ experimental precision in order to obtain sensitivity to possible new physics contributions.
-Hence, if a fit of all the relevant operators would lead to some non-zero coefficients, this could be a smocking gun for new physics.
-This would then open the possibility to characterising these new physics effects that might lead to finding a new resonance through direct searches.
+One of the main points to be addressed in the EFT analysis is that of the EFT validity: as mentioned above, adopting a dimension-6 parameterization is theoretically justified only for $\Lambda$ sufficiently larger than $v$. Namely the impact of dimension-8 terms $\sim (E/\Lambda)^4$ should be roughly smaller than the experimental uncertainty. When analysing experimental data, however, the cutoff scale $\Lambda$ is unknown and the actual energy $E$ exchanged in the process is often unaccessible too. Extracting $E$ is particularly complex for VBS at the LHC, with various scales entering at different stages in the (sub-)process(es).
+Thus the validity of the EFT cannot be established a priori: at best it can be verified a posteriori, basically checking that the energy range of the distributions used for the fit does not exceed the lower limit obtained for the cutoff. Some methods of this kind are already available in the literature~\cite{Contino:2016jqw,Brivio:2017ije}[ADD MORE REFS?] and could also be applied to VBS studies.
+If a constraint is found to be incompatible with the validity of the EFT itself, it should be rejected.
+The application of unitarisation methods should be avoided in this context: these techniques aim at correcting the divergences obtained in the kinematic distributions of montecarlo generated signals. However, these divergences are a manifestation of the breakdown of the effective expansion in the high energy regime. The damping introduced by the unitarisation effectively alters in an artificial way the behavior of the Taylor series, leading to a wrong estimation both of the EFT validity and of the constraints on the Wilson coefficients.
 
-But for now, the plan for the next months will be to study the experimental constraints one can obtain on EFT.
-For this, one should agree on a given parametrisation of dimension$-6$ operators (for a start as it is simpler than dimension$-8$ operators).
-Then it would be useful to list and test the possible theoretical tools that can provide such predictions.
-Once this has been done, it would be interesting to look at whether other data set than the ones of the VBS process could be more lead to more stringent constraints.
-In this regard, it will probably be very useful to think about ways to present data (cross sections, differential distributions) so that they can be use simply by theorists.
+\vskip 1em
+The first step of the EFT-VBS program, to be completed in the near future, is an accurate theoretical study of VBS in the SMEFT at dimension 6, which includes agreeing on a given parametrisation, evaluating the necessity of reducing the number of operators considered and testing the capabilities of available theoretical tools (montecarlo generators etc). This will be conducted in parallel with a preliminary study of the experimental constraints that could be obtained. One of the primary goals of these studies, in which both theorists and experimentalists will participate, is to define an optimal way to report data (cross sections and differential distributions) that maximizes the transparency and versatility of the results.
+Finally, further avenues are worth exploring in a subsequent stages, among which the analysis of the HEFT basis (and later on, if possible, of dimension-8 operators) and a comparison of the impact of VBS processes with that of other datasets, with the possibility of considering a combination of different measurements in the fit.
+
+
