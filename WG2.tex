@@ -1,14 +1,14 @@
 \label{WG2}
 
 \subsection{Experimental Overview -- N. Lorenzo Martinez}
-At the time of the workshop, a number of experimental results in VBS have been available, all of them from the LHC experiments CMS and ATLAS (see Tab.~\ref{tab:wg1:expres}). The highlight among these results is a measurement from the CMS experiment in the $W^\pm W^\pm$ channel, which for the first time shows the existence of the electroweak contribution in VBS processes at high significance (5 $\sigma$)~\cite{CMS:2017adb}.
+At the time of the workshop, a number of experimental results in VBS have been available, all of them from the LHC experiments CMS and ATLAS (see Tab.~\ref{tab:wg2:expres}). The highlight among these results is a measurement from the CMS experiment in the $W^\pm W^\pm$ channel, which for the first time shows the existence of the electroweak contribution in VBS processes at high significance (5 $\sigma$)~\cite{CMS:2017adb}.
 
 By now, a large fraction of the different possible final state boson combinations have been studied by at least one experiment, with the notable absence of the $\gamma\gamma$ and $W^\pm W\mp$ channels. This wide coverage of channels has been shown to be very helpful when constraining aQGCs, as the different channels show varying sensitivity to different operators.
 \textbf{add some figure here?} Even though, progress has been made, it would still be advantegeous if both experiments could cover all relevant channels.
 
 \begin{table}[htb]
 \centering
-\label{tab:wg1:expres}
+\label{tab:wg2:expres}
 \title{Experimental results on VBS processes by final state. Only the most recent result from each experiment is shown.}
 \begin{tabular}{|l|c|c|}
     \hline
@@ -35,12 +35,32 @@ Providing recommendations to resolve the above two issues should be an important
 
 \subsection{Common Selection Criteria -- X. Janssen}
 
-Goal have realistic phase-space definition for theory- and feasability studies
+In order to facilitate feasibility studies and similar forward looking analysis in a way that allows for a fair comparison between such studies, it will be useful to define a common baseline for a fiducial phasespace. However, a single definition cannot serve as the base for every study for the following reasons:
+\begin{itemize}
+\item The experiments themselves will evolve due to hardware upgrades planned for the high luminostiy phase of the LHC, necessitating different assumptions on the detector acceptance depending on the integrated luminosity used for the forward lookgin study.
+\item Different final VBS channels and different boson decay modes may require notably different selection criteria.
+\end{itemize}
 
-Comparison of selections of existing analysis.
-Reasonable baseline possible for ``easy'' channels (e.g. WW), where signal is accessible in cut \& count style analysis.
+The simplest case is realized for near term studies of VBS channels with signals large enough to be amenable to simple ``cut \& count'' style analysis, notably the $W^\pm W^\pm$ channel. Based on published results, a phase-space region close to CMS as well as ATLAS studies has been identified (see Tab.~\ref{tab:wg2:phasespac}). This is likely to be useful for forward looking studies reaching up to, but excluding the high luminostiy phase of the LHC.
 
-Ultimately difficult for signals with very low cross-section / BR / efficiency (e.g. ZZ), as these require very loose phase-space selection + sophisticated MVA final selection, which is not easily modeled for the above purpose.
+Further extrapolation into the future suffers from problem, that the design work for the envisioned detector upgrades is not entirely completed yet, so that work in this area is necessarily somewhat speculative. Nevertheless a few general conclusions can be drawn from existing detector design documents. Both experiments plan to improve their trigger systems to keep the thresholds for lepton triggers at a similar level to current running conditions, so that $p_{\mathrm{T}}$ thresholds should remain close to current ones. Both expseriments also plan to extend coverage of their repsective tracking detectors up to $|\eta|\sim 4$. However due to differences in the other systems relevant for lepton identification (electromagnetic calorimeter and muons systems), the final geometric coverage for the leptons is not yet certain and may differ substantially between experiments.
+
+While the common phase space definitions discussed here are useful for the study of channels that are experimentally accessible with straight forward techniques, they are less suitable for studies of channels with very low cross section, branching fraction or efficiency, as exemplified by the $ZZ\rightarrow 4\ell$ channel. Due to the low number of observable events in this channel, the existing analyis~\cite{CMS-PAS-SMP-17-006} is performed in a very inclusive phase space, employing sophisticated mutli-variate techniques to isolate the signal. Such multivariate techniques are difficult to model in forward looking studies in a simple manner, and an ad-hoc implementation of a  ``cut \& count'' style study is likely to severly underestimate the future performace of the LHC detectors. For this case, the scaling of existing results according to the expected growth with luminosity of signal and background yields, will be preferable.
+
+\begin{table}[htb]
+\centering
+\label{tab:wg2:phasespace}
+\title{Proposed phase space for studies in the WW channel.}
+\begin{tabular}{|l|l|l|l|l|}
+    \hline
+             & electrons & muons & jets & photons \\
+    \hline
+    $|\eta|$ & $<2.5$  & $<2.4$ & $<4.5$ & $<2.5$ \\
+    $p_\mathrm{T,lead.}$ & $>25$~GeV & $>25$~GeV &$>30$~GeV &$>25$~GeV\\
+    $p_\mathrm{T,sublead.}$ & $>15$~GeV & $>15$~GeV &&\\                            
+    \hline
+  \end{tabular}  
+\end{table}
 
 \subsection{Prospects -- M. Kobel}
 
