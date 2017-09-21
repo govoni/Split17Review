@@ -203,7 +203,7 @@ The derived value of the EW coupling $\alpha$, corresponding to our choice of in
 \begin{equation}
  \alpha = 7.555310522369 \times 10^{-3}. \\
 \end{equation}
-We employ the complex-mass scheme~\cite{} to treat unstable intermediate particles in a gauge-invariant manner.\\
+We employ the complex-mass scheme~\cite{} to treat unstable intermediate particles in a gauge-invariant manner {\bf CHECK THAT ALL CODES USE THE CMS}.\\
 
 Cross sections and distribution are computed within the following VBS cuts: 
 \begin{itemize}
@@ -234,11 +234,48 @@ Cross sections and distribution are computed within the following VBS cuts:
         which are not combined at this step are clustered with QCD partons to form jets as it is described in the previous bullet.
 \end{itemize}
 
-PLOTS\\
-The results of our comparison show an excellent agreement of the different tools at LO, which justify the approximations made in some of these tools not to include certain 
-contributions. At NLO, slightly larger (but still below $10\%$) effects can be noticed for example at low dijet invariant mass, where $s-$ channels and interferences are not
-as much suppressed as at LO, because of real QCD radiation.
-
+In Tab.~\ref{tab:wg1_LOrates} we report the total rates at LO accuracy obtained with the setup described above, and in Fig.~\ref{fig:wg1_mjj-llLO} we show the results
+for the tagging-jet (left) and lepton-pair (right) invariant-mass distribution. In both cases we see an excellent agreement among the various tools, which confirms the fact
+that within VBS cuts contributions from $s-$channel diagrams as well as from non-resonant configurations are strongly suppressed.
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{c|c}
+        Code  &  $\sigma[\rm{fb}]$  \\
+        \hline
+        \hline
+        {\sc POWHEG}  &  $1.5573 \pm 0.0003$ \\
+        {\sc Recola}\+{\sc MoCaNLO}  &  $1.5503 \pm 0.0003$ \\
+        {\sc VBFNLO}  &  $1.5538 \pm 0.0002$ \\
+        {\sc BONSAY}  &  $1.5524 \pm 0.0002$ \\
+        {\sc MG5\_aMC}&  $1.547 \pm 0.001$   
+    \end{tabular}
+    \caption{\label{tab:wg1_LOrates} LO rates within VBS cuts from the different codes.}
+\end{table}
+%
+\begin{figure}[h!]
+   \centering
+   \includegraphics[width=0.49\textwidth,angle=0,clip=true,trim={0.4cm 2.5cm 0.6cm 1.cm}]{figures/mjj_LO.pdf}
+   \includegraphics[width=0.49\textwidth,angle=0,clip=true,trim={0.4cm 2.5cm 0.6cm 1.cm}]{figures/mll_LO.pdf}
+\caption{\label{fig:wg1_mjj-llLO}Invariant-mass of the two tagging jets (left) and of the two leptons (right), at LO.
+}
+\end{figure}
+%
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{c|c|c|c}
+        Code  &  $\sigma[\rm{fb}]$  &  $\sigma(n_j=2)[\rm{fb}]$  &  $\sigma(n_j=3)[\rm{fb}]$\\
+        \hline
+        \hline
+        {\sc POWHEG}  &  $1.334 \pm 0.0003$  &  $0.808 \pm  0.001$  &  $0.5260 \pm 0.0005$\\
+        {\sc Recola}\+{\sc MoCaNLO}  &  $1.317 \pm 0.004 $ \\
+        {\sc VBFNLO}  &  $1.3531 \pm 0.0003$  &  $0.8264 \pm  0.0003$  &  $0.5267 \pm 0.0001$\\
+        {\sc BONSAY}  &  $1.3366 \pm 0.0009$  &  $0.8199 \pm  0.0008$  &  $0.51663 \pm 0.00007$ \\
+        {\sc MG5\_aMC}&  $1.318  \pm 0.003$  &  $0.781 \pm  0.004$  &  $0.5374 \pm 0.0016$\\
+    \end{tabular}
+    \caption{\label{tab:wg1_NLOrates} NLO rates within VBS cuts from the different codes. {\bf keep or drop jet rates?}}
+\end{table}
+At NLO, rates show slightly large discrepancies, as it can be observed in Tab.~\ref{tab:wg1_NLOrates}. This is most likely due to low dijet invariant-mass configurations, where
+$s-$channel diagrams and interferences are less suppressed than at LO, because of the presence of extra QCD radiation.
 
 We conclude this session by recalling that the results presented must be regarded as preliminary.
 In the coming months, this work will be enlarged to include comparison of predictions at NLO QCD matched to parton shower or with EW corrections, 
