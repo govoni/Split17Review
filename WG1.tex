@@ -147,7 +147,15 @@ The reason of these differences is that,
 when typical signal cuts for VBS are imposed, these effects turn to be small on rates and distributions.
 
 In our comparison, we use the following codes: {\bf ADD/CHECK CITES} 
-{\sc Bonsay}~\cite{},
+
+The program {\sc Bonsay} consists of a general-purpose Monte Carlo integrator
+and matrix elements taken from several sources: Born matrix elements are
+adapted from the program {\sc Lusifer} \cite{Dittmaier:2002ap} for the partonic
+processes, real matrix elements are written by Marina Billoni, and virtual
+matrix elements by Stefan Dittmaier.
+One loop integrals are evaluated using the {\sc Collier} library
+\cite{Denner:2014gla,Denner:2016kdg}.
+
 {\sc MadGraph5\_aMC@NLO}~\cite{Alwall:2014hca}, 
 {\sc Powheg}~\cite{},
 
@@ -186,7 +194,7 @@ In Tab.~\ref{tab:wg1_codes} the details of the various codes are reported. In pa
         A. Karlberg  &  {\sc POWHEG}  &  $t/u$  &  No  &  Yes  &  No  &  No  \\
         M. Pellen    &  {\sc Recola}  &  Yes  &  Yes  &  Yes  &  Yes  &  Yes  \\
         M. Rauch     &  {\sc VBFNLO}  &  Yes  &  No  &  Yes  &  No  &  No  \\
-        C. Schwan    &  {\sc BONSAY}  &  $t/u$  &  No  &  Yes, virt. No  &  No  &  No  \\
+        C. Schwan    &  {\sc Bonsay}  &  $t/u$  &  No  &  Yes, virt. No  &  No  &  No  \\
         M. Zaro      &  {\sc MG5\_aMC}  &  Yes  &  Yes  &  No virt.  &  No  &  No \\
         J. Reuter    &  {\sc Whizard}  &    &    &    &    &  
     \end{tabularx}
@@ -260,7 +268,7 @@ that contributions from $s-$channel diagrams as well as from non-resonant config
         {\sc POWHEG}  &  $1.5573 \pm 0.0003$ \\
         {\sc Recola}\+{\sc MoCaNLO}  &  $1.5503 \pm 0.0003$ \\
         {\sc VBFNLO}  &  $1.5538 \pm 0.0002$ \\
-        {\sc BONSAY}  &  $1.5524 \pm 0.0002$ \\
+        {\sc Bonsay}  &  $1.5524 \pm 0.0002$ \\
         {\sc MG5\_aMC}&  $1.547 \pm 0.001$  \\ 
         {\sc Whizard}&  $ 1.5539 \pm 0.0004 $   
     \end{tabular}
@@ -286,7 +294,7 @@ computed with the different codes used in this comparison. The inset shows the r
         {\sc POWHEG}  &  $1.334 \pm 0.0003$  \\
         {\sc Recola}\+{\sc MoCaNLO}  &  $1.317 \pm 0.004 $ \\
         {\sc VBFNLO}  &  $1.3531 \pm 0.0003$  \\
-        {\sc BONSAY}  &  $1.3366 \pm 0.0009$  \\
+        {\sc Bonsay}  &  $1.3366 \pm 0.0009$  \\
         {\sc MG5\_aMC}&  $1.318  \pm 0.003$  \\
     \end{tabular}
     \caption{\label{tab:wg1_NLOrates} Rates at NLO-QCD accuracy within VBS cuts obtained with the different codes used in this comparison, 
