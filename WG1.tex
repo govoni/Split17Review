@@ -13,8 +13,8 @@ In view of the growing mole of data which will be collected by the experiments, 
 In that respect next-to-leading order (NLO) QCD and electroweak (EW) corrections to such signatures should be computed.
 So far, NLO computations have focused on NLO QCD corrections to the VBS process~\cite{Jager:2009xx,Jager:2011ms,Denner:2012dz,Rauch:2016pai} and its QCD-induced irreducible background process~\cite{Melia:2010bm,Melia:2011gk,Campanario:2013gea,Baglio:2014uba,Rauch:2016pai}.
 No NLO EW corrections have been computed and the NLO QCD computations relied on the so-called VBS approximation.
-In Refs.~\cite{Biedermann:2017bss}, for the first time, all leading order (LO) and NLO contributions to the full ${\rm p}{\rm p}\to\mu^+\nu_\mu{\rm e}^+\nu_{\rm e}{\rm j}{\rm j}$ process have been reported. \footnote{The $\mathcal{O}{\left(\alpha^{7}\right)}$ corrections
-were computed previously in Ref.~\cite{Biedermann:2016yds}}.
+In Ref.~\cite{Biedermann:2017bss}, for the first time, all leading order (LO) and NLO contributions to the full ${\rm p}{\rm p}\to\mu^+\nu_\mu{\rm e}^+\nu_{\rm e}{\rm j}{\rm j}$ process have been reported\footnote{The $\mathcal{O}{\left(\alpha^{7}\right)}$ corrections
+were computed previously in Ref.~\cite{Biedermann:2016yds}.}.
 As the full amplitudes are used, this amounts to compute three LO contributions and four NLO contributions.
 At LO, the three contributions are the EW process (order $\mathcal{O}{\left(\alpha^{6}\right)}$), its QCD-induced counterpart (order $\mathcal{O}{\left(\alpha_{\rm s}\alpha^{5}\right)}$) as well as the interference (order $\mathcal{O}{\left(\alpha_{\rm s}^2\alpha^{4}\right)}$).
 Due to the VBS event selection applied to the final state, the full process is dominated by the purely EW contribution (see Table~\ref{table:LOVBS}).
@@ -146,9 +146,10 @@ by the (non-)inclusion of diagrams with vector bosons in the $s$-channel or by t
 The reason of these differences is that, 
 when typical signal cuts for VBS are imposed, these effects turn to be small on rates and distributions.
 
-In our comparison, we use the following codes: {\bf ADD/CHECK CITES} 
+In the comparison, the following codes are used: 
 
-The program {\sc Bonsay} consists of a general-purpose Monte Carlo integrator
+\begin{itemize}
+ \item The program {\sc Bonsay} consists of a general-purpose Monte Carlo integrator
 and matrix elements taken from several sources: Born matrix elements are
 adapted from the program {\sc Lusifer} \cite{Dittmaier:2002ap} for the partonic
 processes, real matrix elements are written by Marina Billoni, and virtual
@@ -156,22 +157,35 @@ matrix elements by Stefan Dittmaier.
 One loop integrals are evaluated using the {\sc Collier} library
 \cite{Denner:2014gla,Denner:2016kdg}.
 
-{\sc MadGraph5\_aMC@NLO}~\cite{Alwall:2014hca}, 
-{\sc Powheg}~\cite{},
+  \item {\sc MadGraph5\_aMC@NLO}~\cite{Alwall:2014hca}. {\bf TO BE FINISHED} 
+  
+  \item The {\sc Powheg-Box}~\cite{Alioli:2010xd,Frixione:2007vw} is a framework for mathcing NLO-QCD calculations with parton showers.
+It relies on the user providing the matrix elements and Born phase space, but will automaticaly construct FKS \cite{Frixione:1995ms} subtraction terms and the phase space for the real emission.
+For the VBS processes all matrix elements are being provided by a previous version of {\sc VBFNLO}~\cite{Arnold:2008rz, Arnold:2011wj, Baglio:2014uba} and hence the approximations used in the {\sc Powheg-Box} are the similar to those used in {\sc VBFNLO}.
 
-The program {\sc Recola+MoCaNLO} is made of a flexible Monte Carlo program dubbed {\sc MoCaNLO}~\cite{MoCaNLO} and the general matrix element generator {\sc Recola} \cite{Actis:2012qn,Actis:2016mpe}.
+  \item The program {\sc Recola+MoCaNLO} is made of a flexible Monte Carlo program dubbed {\sc MoCaNLO}~\cite{MoCaNLO} and the general matrix element generator {\sc Recola} \cite{Actis:2012qn,Actis:2016mpe}.
 To numerically evaluate the one-loop scalar and tensor integrals, {\sc Recola} relies on the {\sc Collier} library \cite{Denner:2014gla,Denner:2016kdg},
 These tools have been successfully used for the computation of NLO corrections for VBS~\cite{Biedermann:2016yds,Biedermann:2017bss}.
 
-{\sc VBFNLO}~\cite{Arnold:2008rz, Arnold:2011wj, Baglio:2014uba} is a flexible
+  \item {\sc VBFNLO}~\cite{Arnold:2008rz, Arnold:2011wj, Baglio:2014uba} is a flexible
 parton-level Monte Carlo for processes with electroweak bosons. It
 allows the calculation of VBS processes at NLO QCD in the VBF
 approximation and including the s-channel triboson contribution,
 neglecting interferences between the two. Besides the SM, also anomalous
 couplings of the Higgs and gauge bosons can be simulated.
 
-{\sc Whizard}~\cite{Moretti:2001zz,Kilian:2007gr}.\\
-DESCRIPTION OF CODES\\
+  \item {\sc Whizard}~\cite{Moretti:2001zz,Kilian:2007gr} is a multi-purpose
+event generator with the LO matrix element generator {\sc O'Mega}. It
+provides FKS subtraction terms for any NLO process, while virtual matrix
+elements are provided externally by {\sc
+OpenLoops}~\cite{Cascioli:2011va} (alternatively, {\sc Recola}~\cite{Actis:2012qn,Actis:2016mpe}
+(cf. above) can be used as well). {\sc Whizard} allows to simulate a
+huge number of BSM models as well, in particular for new physics in
+the VBS channel in terms of both higher-dimensional operators as well as explicit
+resonances.
+
+\end{itemize}
+
 The complete comparison of the codes will be published in a separate work. Here, we present some preliminary results obtained at LO ($\mathcal O (\alpha^6)$) and including
 NLO QCD corrections at fixed-order $\mathcal O (\alpha^6\alpha_s)$, for the process ${\rm p}{\rm p}\to\mu^+\nu_\mu{\rm e}^+\nu_{\rm e}{\rm j}{\rm j}$.
 In Tab.~\ref{tab:wg1_codes} the details of the various codes are reported. In particular, it is specified whether
@@ -192,7 +206,7 @@ In Tab.~\ref{tab:wg1_codes} the details of the various codes are reported. In pa
         \hline
         \hline
         A. Karlberg  &  {\sc POWHEG}  &  $t/u$  &  No  &  Yes  &  No  &  No  \\
-        M. Pellen    &  {\sc Recola}  &  Yes  &  Yes  &  Yes  &  Yes  &  Yes  \\
+        M. Pellen    &  {\sc Recola+MoCaNLO}  &  Yes  &  Yes  &  Yes  &  Yes  &  Yes  \\
         M. Rauch     &  {\sc VBFNLO}  &  Yes  &  No  &  Yes  &  No  &  No  \\
         C. Schwan    &  {\sc Bonsay}  &  $t/u$  &  No  &  Yes, virt. No  &  No  &  No  \\
         M. Zaro      &  {\sc MG5\_aMC}  &  Yes  &  Yes  &  No virt.  &  No  &  No \\
@@ -265,11 +279,11 @@ that contributions from $s-$channel diagrams as well as from non-resonant config
         Code  &  $\sigma[\rm{fb}]$  \\
         \hline
         \hline
-        {\sc POWHEG}  &  $1.5573 \pm 0.0003$ \\
-        {\sc Recola}\+{\sc MoCaNLO}  &  $1.5503 \pm 0.0003$ \\
-        {\sc VBFNLO}  &  $1.5538 \pm 0.0002$ \\
         {\sc Bonsay}  &  $1.5524 \pm 0.0002$ \\
         {\sc MG5\_aMC}&  $1.547 \pm 0.001$  \\ 
+        {\sc POWHEG}  &  $1.5573 \pm 0.0003$ \\
+        {\sc Recola+MoCaNLO}  &  $1.5503 \pm 0.0003$ \\
+        {\sc VBFNLO}  &  $1.5538 \pm 0.0002$ \\
         {\sc Whizard}&  $ 1.5539 \pm 0.0004 $   
     \end{tabular}
     \caption{\label{tab:wg1_LOrates} Rates at LO accuracy within VBS cuts obtained with the different codes used in this comparison, 
@@ -291,11 +305,11 @@ computed with the different codes used in this comparison. The inset shows the r
         Code  &  $\sigma[\rm{fb}]$  \\
         \hline
         \hline
-        {\sc POWHEG}  &  $1.334 \pm 0.0003$  \\
-        {\sc Recola}\+{\sc MoCaNLO}  &  $1.317 \pm 0.004 $ \\
-        {\sc VBFNLO}  &  $1.3531 \pm 0.0003$  \\
         {\sc Bonsay}  &  $1.3366 \pm 0.0009$  \\
         {\sc MG5\_aMC}&  $1.318  \pm 0.003$  \\
+        {\sc POWHEG}  &  $1.334 \pm 0.0003$  \\
+        {\sc Recola+MoCaNLO}  &  $1.317 \pm 0.004 $ \\
+        {\sc VBFNLO}  &  $1.3531 \pm 0.0003$  \\
     \end{tabular}
     \caption{\label{tab:wg1_NLOrates} Rates at NLO-QCD accuracy within VBS cuts obtained with the different codes used in this comparison, 
     for the ${\rm p}{\rm p}\to\mu^+\nu_\mu{\rm e}^+\nu_{\rm e}{\rm j}{\rm j}$ process.}
@@ -420,5 +434,6 @@ Attention should be paid to the application of unitarisation methods, that are o
 The first step of the EFT-VBS program is an accurate theoretical study of VBS in the SMEFT at dimension 6, which includes agreeing on a given parametrisation, evaluating the necessity of reducing the number of operators considered and testing the capabilities of available theoretical tools (Monte Carlo generators etc).
 This will be conducted in parallel with a preliminary study of the experimental constraints that could be obtained. One of the primary goals of these studies, in which both theorists and experimentalists will participate, is to define an optimal way to report data (cross sections and differential distributions) that maximizes the transparency and versatility of the results.
 Finally, further avenues are worth exploring in a subsequent stages, among which the analysis of the HEFT basis (and later on, if possible, of dimension-8 operators) and a comparison of the impact of VBS processes with that of other datasets, with the possibility of considering a combination of different measurements in the fit.
+
 
 
