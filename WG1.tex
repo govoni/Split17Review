@@ -157,8 +157,26 @@ matrix elements by Stefan Dittmaier.
 One loop integrals are evaluated using the {\sc Collier} library
 \cite{Denner:2014gla,Denner:2016kdg}.
 
-  \item {\sc MadGraph5\_aMC@NLO}~\cite{Alwall:2014hca}. {\bf TO BE FINISHED} 
-  
+  \item {\sc MadGraph5\_aMC@NLO}~\cite{Alwall:2014hca} is an automatic meta-code (a code that generates codes) which makes it possible to simulate any scattering process
+      including NLO QCD corrections both at fixed order and including matching to parton showers. It makes use of the FKS subtraction method~\cite{Frixione:1995ms,
+        Frixione:1997np} (automated in the module {\sc MadFKS}~\cite{Frederix:2009yq,
+        Frederix:2016rdc}) for regulating IR singularities. The computationsof one-loop amplitudes are carried out by switching dynamically between 
+        two integral-reduction techniques, OPP~\cite{Ossola:2006us} or Laurent-series expansion~\cite{Mastrolia:2012bu},
+        and TIR~\cite{Passarino:1978jh,Davydychev:1991va,Denner:2005nn}. These have been automated in the module {\sc MadLoop}~\cite{Hirschi:2011pa}, which 
+        in turn exploits {\sc CutTools}~\cite{Ossola:2007ax}, {\sc Ninja}~\cite{Peraro:2014cba,
+        Hirschi:2016mdz}, or {\sc IREGI}~\cite{ShaoIREGI}, together with an in-house implementation of the {\sc OpenLoops} optimisation~\cite{Cascioli:2011va}.\\
+        The simulation of VBS at NLO-QCD accuracy can be performed by issuing the following commands in the program interface:
+\begin{verbatim}
+> set complex_mass_scheme #1
+> import model loop_qcd_qed_sm_Gmu #2
+> generate p p > e+ ve mu+ vm j j QCD=0 [QCD] #3
+> output #4
+\end{verbatim}
+  With these commands the complex-mass scheme is turned on {\tt \#1}, then the NLO-capable model is loaded {\tt \#2}\footnote{Despite
+            the {\tt loop\_qcd\_qed\_sm\_Gmu} model also includes NLO counterterms for computing electro-weak corrections, it is not yet possible to compute such corrections 
+        with the current version of the code.}, finally the process code is generated {\tt \#3} (note the {\tt QCD=0} syntax to select the purely-electroweak process)
+        and written to disk {\tt \#4}. Because of some internal limitations, which will be lifted in the future version capable of computing both QCD and EW corrections, 
+        only loops with QCD-interacting particles are generated.
   \item The {\sc Powheg-Box}~\cite{Alioli:2010xd,Frixione:2007vw} is a framework for mathcing NLO-QCD calculations with parton showers.
 It relies on the user providing the matrix elements and Born phase space, but will automaticaly construct FKS \cite{Frixione:1995ms} subtraction terms and the phase space for the real emission.
 For the VBS processes all matrix elements are being provided by a previous version of {\sc VBFNLO}~\cite{Arnold:2008rz, Arnold:2011wj, Baglio:2014uba} and hence the approximations used in the {\sc Powheg-Box} are the similar to those used in {\sc VBFNLO}.
@@ -210,7 +228,7 @@ In Tab.~\ref{tab:wg1_codes} the details of the various codes are reported. In pa
         M. Rauch     &  {\sc VBFNLO}  &  Yes  &  No  &  Yes  &  No  &  No  \\
         C. Schwan    &  {\sc Bonsay}  &  $t/u$  &  No  &  Yes, virt. No  &  No  &  No  \\
         M. Zaro      &  {\sc MG5\_aMC}  &  Yes  &  Yes  &  No virt.  &  No  &  No \\
-        J. Reuter    &  {\sc Whizard}  &    &    &    &    &  
+        V. Rothe     &  {\sc Whizard}  &  Yes  &  Yes  &  Yes  &  Yes  &  Yes \\  
     \end{tabularx}
     \caption{\label{tab:wg1_codes} Summary of the different properties of the codes employed in the comparison.}
 \end{table}
@@ -324,7 +342,7 @@ the VBS cuts. The QCD-induced background will also be studied.
 
 \subsection{Polarisation of vector bosons - E. Maina}
 
-New physics model could lead to large contributions to the longitudinal polarisation of heavy gauge bosons [citation?].
+New physics model could lead to large contributions to the longitudinal polarisation of heavy gauge bosons.
 Hence it is of prime importance to study the polarisation of the heavy gauge bosons and their effects both in the Standard Model and beyond.
 In particular, it is very important to devise methods that allow for such studies.
 Thus, a starting point is to establish these methods first for the Standard Model.
@@ -354,22 +372,27 @@ Hence, one should only retain the resonant part of the process.
 To achieve this in a gauge invariant way, one can use the double-pole approximation where only diagrams featuring two W-boson propagators are selected.
 This sub-set of diagrams is then evaluated with an on-shell kinematic.
 But on-shell kinematics are not unique so one should use an on-shell projection that should fulfil the following criteria:
-[To be added]
+\begin{itemize}
+ \item The four-momentum of the WW system should be conserved.
+ \item The direction of the two W bosons in the centre-of-mass frame should be conserved.
+ \item The direction of each charged lepton in the W boson centre-of-mass frame should be conserved.
+\end{itemize}
+%
 In such a way, one can set a given polarisation to the W bosons in a gauge invariant manner.
 
 In order to be able to integrate fully over the variable $\phi$, one should consider a typical VBS event selection but without any cuts on the final state leptons.
 If one consider a polarised ${\rm W^-}$-boson and a non-polarised ${\rm W^-}$ boson, one observes that the effect of the interferences between different polarisations (second term of Eq.~\eqref{eq:polarisation}) is below one per cent at the level of the total cross section.
 At the level of differential distributions which do not depend on decay product of the W bosons, the same holds.
 Nonetheless, looking at transverse momentum of the leptons or the angle $\phi$ of the electron, large differences arise.
-Also, looking at the polarisation fraction, results of the polarisation obtained with Legendre analysis [citation?] and through direct computation agree.
+Also, looking at the polarisation fraction, results of the polarisation obtained with Legendre analysis and through direct computation agree.
 
 Turning now to a set-up where one also applies cuts on the transverse momentum and rapidity of the final state leptons, the situation is changing drastically.
-At the level of the cross section and distribution involving non W decay products, the effect is rather limited (about $2\%$).
+At the level of the cross section and distribution involving non W-boson decay products, the effect is rather limited (about $2\%$).
 But one can observe big differences when looking at polarisation fraction.
 
-This analysis demonstrate that one can analysis the polarisation of massive gauge bosons in a well defined set-up for vector boson scattering.
+This analysis demonstrates that it is possible to analyse the polarisation of massive gauge bosons in a well defined set-up for vector-boson scattering processes.
 This study has been done for the Standard Model but could be in principle extended to any new physics model.
-The implementation of this method will soon be public in the code Phantom [citation?]. \\
+The implementation of this method will soon be public in the code Phantom~\cite{Ballestrero:2007xq}.
 
 \subsection{Effective Field theory for vector-boson scattering - I. Brivio}
 
