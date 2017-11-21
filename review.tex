@@ -1,4 +1,4 @@
-\documentclass{article}
+\documentclass[12pt]{article}
     % General document formatting
     \usepackage[margin=0.7in]{geometry}
     \usepackage[parfill]{parskip}
@@ -9,7 +9,12 @@
     \usepackage{graphicx}
     \graphicspath{ {figures/} }
  
-    \usepackage[backend=biber]{biblatex}
+    \usepackage[
+       backend=biber,
+       style=numeric,
+       sorting=none % this is to have the normal sorting!!
+     ]{biblatex}
+ 
     \addbibresource{review.bib}
 
     \usepackage{authblk}
@@ -62,25 +67,25 @@ from the phenomenological and experimental point of view,
 for the best exploitation of the data that will be delivered by the LHC future operations.
 The community is organized in five working groups,
 three of which are dedicated to the scientific aspects of the collaboration.
-One dedicated to the Theoretical Understanding of the VBS process,
+One is dedicated to the Theoretical Understanding of the VBS process,
 which targets a detailed description of the VBS signal 
 and relative backgrounds in the Standard Model (SM) case, 
-as well as effective field theory (EFT) modeling of beyond the Standard Model (BSM) effects.
+as well as effective field theory (EFT) modeling of beyond the SM (BSM) effects.
 A second one focuses on Analysis Techniques,
 studying the definition of data analysis protocols and agreements 
 to maximise the significance of VBS analyses at hadron colliders, 
-fostering the communication between theory and experiments.
+promoting the communication between theory and experiments.
 A third one fosters the optimal deployment of VBS studies 
 in the hadron collider experiments data analyses.
 \newline{}
 The VBSCan Network is composed by theoretical and experimental physicists from both the ATLAS and CMS experiments,
 as well as data analysis experts and industrial partners.
 The first general meeting of the Network happened at the end of June 2017 in Split~\cite{kickoff}
-and was composed by reviews of the data analysis status of the art,
+and was dedicated to reviews of the data analysis status of the art,
 as well as of the theoretical and experimental instruments
 relevant for VBS studies.
-In this report,
-a summary of the talks presented\footnote{All the presentation materials can be found at \url{https://indico.cern.ch/event/629638/}.} during the first general meeting of the Network is presented,
+This report contains
+a summary of the talks presented\footnote{All the presentation material can be found at \url{https://indico.cern.ch/event/629638/}.} during the first general meeting of the Network,
 divided into sections corresponding to the Network working groups.
 
 \section{Theoretical Understanding}
@@ -97,9 +102,25 @@ divided into sections corresponding to the Network working groups.
 
 \section*{Conclusions}
 
-\printbibliography
+The VBSCan COST Action
+gathers experts from the experimental, theoretical and statistics communities
+to find a common strategy to tackle the great issues presented
+by the measurement of the VBS processes at hadron colliders.
+With an engagement that will last four years,
+the community aims at going beyond the state of the art
+in the instruments and knowledge needed for the best exploitation
+of existing and future data 
+that will be made available by the LHC and future colliders,
+to determine the high-energy behaviour of the very core of the Standard Model,
+the electroweak symmetry breaking.
 
-% \bibliographystyle{plain}
-% \bibliography{review} 
+\section*{Acknowledgements}
+
+The author(s) would like to acknowledge the contribution of the COST Action CA16108.
+
+%\bibliographystyle{plain}
+%\bibliography{review} 
+
+\printbibliography
 
 \end{document}

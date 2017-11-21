@@ -1,13 +1,15 @@
 \label{WG3}
 
-\subsection{Large R jets and boosted object tagging in ATLAS -- C. F. Anders}
-At the high center of mass energies of the Large Hadron Collider even the heaviest known Standard Model particles can be observed with large transverse momenta, in the so called boosted topology. Boosted $W$ and Higgs bosons and top quarks that decay to quarks will be highly collimated and can therefore be reconstructed in a single jet with large radius parameter $R$. In ATLAS the jets are reconstructed with the anti-k$_t$~\cite{Cacciari:2008gp} algorithm, usually requiring a transverse momentum of $p_T>200$~GeV and a radius parameter of $R=1.0$ and are trimmed~\cite{Krohn:2009th} with the parameters  $R_{\mathrm{sub}}=$ 0.2 and $f_{\mathrm{cut}}=$ 5\%. 
+\subsection{Large R jets and boosted object tagging in ATLAS}
+% C. F. Anders
 
-To distinguish signal, e.g.\ real $W$ bosons from QCD induced jet backgrounds one of the main observables is the jet mass, calculated from the jet constituents. In Figure \ref{fig:jetmass_W} the distribution of the jet mass in data and simulation is shown after a lepton + jet selection that aims at selecting $t\bar{t}$ events. It shows a clear peak at the expected Standard Model $W$ boson mass. Using a further discriminating variable $W$ boson taggers are build that have a fixed signal efficiency of 50\% and reduce the background by a factor of 50.
+At the high center of mass energies of the Large Hadron Collider even the heaviest known SM particles can be observed with large transverse momenta, in the so called boosted topology. Boosted $W$ and Higgs bosons and top quarks that decay to quarks will be highly collimated and can therefore be reconstructed in a single jet with large radius parameter $R$. In ATLAS the jets are reconstructed with the anti-k$_t$~\cite{Cacciari:2008gp} algorithm, usually requiring a transverse momentum of $p_T>200$~GeV and a radius parameter of $R=1.0$ and are trimmed~\cite{Krohn:2009th} with the parameters  $R_{\mathrm{sub}}=$ 0.2 and $f_{\mathrm{cut}}=$ 5\%. 
+
+To distinguish signal, e.g.\ real $W$ bosons from QCD induced jet backgrounds one of the main observables is the jet mass, calculated from the jet constituents. In Figure \ref{fig:jetmass_W} the distribution of the jet mass in data and simulation is shown after a lepton + jet selection that aims at selecting $t\bar{t}$ events. It shows a clear peak at the expected SM $W$ boson mass. Using a further discriminating variable $W$ boson taggers are build that have a fixed signal efficiency of 50\% and reduce the background by a factor of 50.
 \begin{figure}[!h]
 \begin{centering}
 \includegraphics[width=0.48\textwidth]{WG3_plots/fig_07}
-\caption{Distribution of the calorimeter jet mass spectrum for the leading-p$_T$ jet in 13 TeV data and MC simulation using trimmed (J. High Energ. Phys. (2010) 2010: 84.) anti-k$_t$ R=1.0 jets  with trimming parameters $f_{\mathrm{cut}}=5$\% and $R_{\mathrm{sub}} = 0.2$ in lepton+jets events. The large $R$ jets are required to have $p_T>200$ GeV. (cite: http://atlas.web.cern.ch/Atlas/GROUPS/PHYSICS/PLOTS/JETM-2016-005/)}
+\caption{Distribution of the calorimeter jet mass spectrum for the leading-p$_T$ jet in 13 TeV data and MC simulation using trimmed~\cite{Krohn:2009th} anti-k$_t$ R=1.0 jets with trimming parameters $f_{\mathrm{cut}}=5$\% and $R_{\mathrm{sub}} = 0.2$ in lepton+jets events. The large $R$ jets are required to have $p_T>200$~GeV~\cite{ATLASplots1}.}
 \label{fig:jetmass_W}
 \end{centering}
 \end{figure}
@@ -19,14 +21,15 @@ Recently, the possibilities of adding more information and exploiting multi-dime
 \begin{figure}[!h]
 \begin{centering}
 \includegraphics[width=0.48\textwidth]{WG3_plots/fig_07c}
-\caption{Distributions showing comparison of the BDT and DNN taggers performance to a simple W tagger. (http://atlas.web.cern.ch/Atlas/GROUPS/PHYSICS/PUBNOTES/ATL-PHYS-PUB-2017-004/)}
+\caption{Distributions showing comparison of the BDT and DNN taggers performance to a simple W tagger~\cite{ATL-PHYS-PUB-2017-004}.}
 \label{fig:MVA}
 \end{centering}
 \end{figure}
 
 
 
-\subsection{Jet substructure techniques for VBS in CMS -  A. Hinzmann}
+\subsection{Jet substructure techniques for VBS in CMS}
+% A. Hinzmann
 
 Jet identification techniques that make use of jet substructure information are important tools for the measurement of VBS.
 A brief summary of the existing tools used by the CMS experiment and future prospects for the HL-LHC is given in the following.
@@ -35,14 +38,15 @@ To probe high WW, ZZ or WZ invariant masses, special jet identification techniqu
 The maximum angular separation between the quark and anti-quark is given by $\Delta R_{q\bar{q}}=2 m / p_{T}$, where $m$ and $p_T$ are the mass and transverse momentum, respectively, of the W or Z boson.
 For a W boson with $p_T=1$ TeV, an angular separation of  $\Delta R_{q\bar{q}}=0.2$ is expected, which is well below the typical jet size parameter of 0.4 used by CMS.
 At even higher $p_T=3.5$ TeV, the angular distance $\Delta R_{q\bar{q}}=0.05$ between the decay products of a W boson is even smaller than the granularity of the hadron calorimeter of CMS with cell sizes of $\Delta \eta \times \Delta \phi = 0.087 \times 0.087$ in the barrel region of the detector.
-CMS thus employs a particle-flow event algorithm~\cite{CMS-PRF-14-001} to measure jet substructure, that reconstructs and identifies each individual particle with an optimized combination of information from the various elements of the CMS detector, benefiting from spatial and energy resolution of all sub-detectors.
+CMS thus employs a particle-flow event algorithm~\cite{Sirunyan:2017ulk} to measure jet substructure, that reconstructs and identifies each individual particle with an optimized combination of information from the various elements of the CMS detector, benefiting from spatial and energy resolution of all sub-detectors.
 
 \begin{figure}[htb]
+\begin{center}
 % \hspace{-2cm}
 \includegraphics[width=.35\textwidth]{WG3_plots/CMS-PAS-JME-16-003_Figure_018-c}
-\hfill
 \includegraphics[width=.42\textwidth]{WG3_plots/CMS-PAS-JME-16-003_Figure_014-b}
 % \vspace*{-1em}
+\end{center}
 \caption{(Left) Softdrop jet mass of boosted W bosons in data and simulated samples of top pair production in the single lepton plus jets final state.
 (right) Pileup jet MVA discriminator in data and simulation for jets with $|\eta|>3.0$.}
 \label{fig:CMSsubstructure}
