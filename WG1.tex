@@ -354,57 +354,138 @@ the VBS cuts. The QCD-induced background will also be studied.
 \subsection{Polarisation of vector bosons}
 % E. Maina
 
-New physics models could lead to large contributions to the longitudinal polarisation of heavy gauge bosons.
-Hence it is of prime importance to study the polarisation of the heavy gauge bosons and their effects both in the SM and beyond.
-In particular, it is very important to devise methods that allow for such studies.
-Thus, a starting point is to establish these methods first for the SM.
-In this respect, a new technique has been proposed and applied to the scattering of two W bosons of opposite charge \cite{Ballestrero:2017bxn}.
+Processes related to new physics could disturb the delicate balance which preserves unitarity
+in Vector Boson Scattering  between longitudinally polarized vector bosons
+and lead to potentially large enhancements of the VBS rate, making it the ideal process for searches of 
+deviations from the SM and hints of New Physics. 
+Developing methods which allow the separation of the different vector polarizations is, therefore, of primary
+relevance.
+A new technique has been proposed and applied to the scattering of two $W$ bosons of opposite charge
+\cite{Ballestrero:2017bxn}.
 
-First, a matrix element squared can be written in general as
-
+The basic tool has been known for a long time.
+The polarization tensor in the W propagator can be expressed in terms of polarization vectors:
 \begin{equation}
-\label{eq:polarisation}
- \mathcal{A}^2 = \sum_{\lambda} \mathcal{A}^2_{\lambda, \lambda} + \sum_{\lambda \neq \lambda'} \mathcal{A}^2_{\lambda, \lambda'}, 
+-g^{\mu\nu} + \frac{k^{\mu}k^{\nu}}{M^2} = \sum_{\lambda = 1}^4 \varepsilon^{\mu}_\lambda(k) 
+\varepsilon^{\nu^*}_{\lambda}(k)\,\,.
 \end{equation}
-%
-where $\lambda$ and $\lambda'$ represent the polarisations of the heavy gauge bosons.
-Usually the last term of Eq.~\eqref{eq:polarisation} is assumed to be zero.
-This is only true, though, when ones integrates over the full phase space over the variable $\phi$.
-In experiments, it is never the case as experimental measurements are never done fully inclusively.
-Indeed they always include event selections that cut into the phase space and make the use of a full computation necessary.
 
-Second, an amplitude can be formally divided into resonant and non-resonant contributions as
-
-\begin{equation}
-\mathcal{A} = \mathcal{A}_{\rm res} + \mathcal{A}_{\rm non-res} .
+The decay amplitudes of the $W$ depend on its polarization.
+In the rest frame of the $\ell\nu$ pair, they are:
+\begin{equation}\label{eq:longamp}
+\mathcal{M^D}_0 = ig\,\sqrt{2}E \,\sin\theta \,\,,\quad
+\mathcal{M^D}_{R/L} = ig\,E \,(1 \pm \cos\theta)e^{\pm i\phi} \,\,,
 \end{equation}
-%
-Non-resonant propagators cannot be interpreted as W production.
-Hence, one should only retain the resonant part of the process.
-To achieve this in a gauge invariant way, one can use the double-pole approximation where only diagrams featuring two W-boson propagators are selected.
-This sub-set of diagrams is then evaluated with an on-shell kinematic.
-But on-shell kinematics are not unique so one should use an on-shell projection that should fulfil the following criteria:
+ where $0,R,L$ refer to the longitudinal,right and left polarizations and $(\theta, \phi)$ are the charged 
+ lepton angles relative to the boson direction.
+Hence, each physical polarization is uniquely associated with a specific angular distribution of the charged
+lepton.    
+
+Two issues, however, remain unresolved: 
+
 \begin{itemize}
- \item The four-momentum of the WW system should be conserved.
- \item The direction of the two W bosons in the centre-of-mass frame should be conserved.
- \item The direction of each charged lepton in the W boson centre-of-mass frame should be conserved.
-\end{itemize}
-%
-In such a way, one can set a given polarisation to the W bosons in a gauge invariant manner.
+\item With few exceptions, ElectroWeak boson production processses are described by amplitudes
+including non resonant diagrams, which cannot be interpreted as
+production times decay of any vector boson.
+These diagrams are essential for gauge invariance and cannot be ignored.
+For them, separating polarizations is simply unfeasible. 
+\item Since the  W's are unstable particles, the decays of the indidual 
+polarizations interfere among themselves.
+ \end{itemize} 
 
-In order to be able to integrate fully over the variable $\phi$, one should consider a typical VBS event selection but without any cuts on the final state leptons.
-If one considers a polarised ${\rm W^-}$ boson and a non-polarised ${\rm W^-}$ boson, one observes that the effect of the interferences between different polarisations (second term of Eq.~\eqref{eq:polarisation}) is below one per cent at the level of the total cross section.
-At the level of differential distributions which do not depend on decay product of the W bosons, the same holds.
-Nonetheless, looking at transverse momentum of the leptons or the angle $\phi$ of the electron, large differences arise.
-Also, looking at the polarisation fraction, results of the polarisation obtained with Legendre analysis and through direct computation agree.
+In order to define amplitudes with definite $W$ polarization, it is necessary to devise an accurate 
+approximation to the full result that only involves double resonant diagrams.
+Ref.~\cite{Ballestrero:2017bxn} employed an On shell Projection (OSP) method,
+similar to the procedure employed for
+the calculation of EW radiative corrections to $W^+W^-$ production in
+refs.\cite{Denner:2000bj}.
+ 
+It consists in substituting the momentum of the $\ell\nu$ pair  with a momentum on the $W$ mass shell, 
+while the denominator in the $W$ propagator is left untouched. However,
+this projection is not uniquely defined. In order to have an unambiguous
+prescription one can choose to conserve:
+the total four--momentum of the $WW$ system (thus, also $M_{WW}$ is conserved);
+the direction of the two $W$ bosons in the $WW$ center of mass frame;
+the angles of each charged lepton, in the corresponding $W$ center of mass frame, relative to the boson
+direction in the lab.
+This procedure is gauge invariant. 
 
-Turning now to a set-up where one also applies cuts on the transverse momentum and rapidity of the final state leptons, the situation is changing drastically.
-At the level of the cross section and distribution involving non W boson decay products, the effect is rather limited (about $2\%$),
-while one can observe big differences when looking at polarisation fraction.
+ If, for instance, one considers a polarised $W^-$
+ boson and a non-polarised $W^+$ one, once all non double resonant diagrams have been dropped and the
+ resonant ones have been projected,
+the squared amplitude becomes:
+\begin{equation}\label{eq:interfpol}
+\underbrace{\left|\mathcal{M}\right|^2}_{\textrm{coherent sum}} = \underbrace{\sum_{\lambda}\left|
+\mathcal{M}_{\lambda}\right|^2}_{\textrm{incoherent sum}} + \underbrace{\sum_{\lambda \neq \lambda'}
+\mathcal{M}_{\lambda}^{ *}\mathcal{M}_{\lambda'}}_{\textrm{interference terms}}\,.
+\end{equation}
+where $\lambda$ is the $W^-$ polarization.
+In the absence of cuts on the final state leptons, the interference terms in Equation~\ref{eq:interfpol} cancel upon 
+integration and the projected cross section is simply the sum of singly polarized cross sections. 
+In the $W$ center of mass frame the charged lepton angular distribution is: 
+\begin{equation}
+\frac{1}{\sigma(X)} \,\,\frac{d\sigma(\theta,X)}{d\cos\theta}
+\ =\  \frac{3}{8} (1 + \cos\theta)^2 \,f_L
+    + \frac{3}{8} (1 - \cos\theta)^2 \,f_R
+    + \frac{3}{4} \sin^2\theta \, f_0 \,,
+\label{eq:dcdist}
+\end{equation}
 
-This analysis demonstrates that it is possible to analyse the polarisation of massive gauge bosons in a well defined set-up for vector-boson scattering processes.
-This study has been done for the SM but could be in principle extended to any new physics model.
-The implementation of this method will soon be public in the code Phantom~\cite{Ballestrero:2007xq}.
+The coherent sum of  OSP polarized amplitudes differs by about one percent from the exact cross section.
+The differential distributions which do not depend on decay products of the
+$W$ bosons are equally well described.
+Other variables, like the transverse momentum or the
+angle $\phi$ of the electron, show sizable differences  between the exact distributions and the projected 
+ones.
+The polarisation fractions obtained with a Legendre analysis and through direct computation of singly 
+polarized processes agree.
+
+\begin{figure}[!tb]
+\centering
+\subfigure[{$\cos\theta_e$}\label{fig:distrib_thetal_lepcut}]
+{\includegraphics[scale=0.34]{WG1_plots/thetael_mww300_polOSPvsFUL_lepcut20_withLegendre.pdf}}
+\qquad
+\subfigure[{Polarization fractions}\label{fig:polfrac_MWW_lepcut}]
+{\includegraphics[scale=0.34]{WG1_plots/polfracVSmww_H125_PA_lepcut20.pdf}}
+\caption{Distribution of $\cos\theta$ in the $W$ reference frame (left), polarization fractions as functions of 
+$M_{ww}$ (right).}
+\label{fig:distrib_thetal_polfrac_lepcut}
+\end{figure} 
+
+The approach proposed in ref~\cite{Ballestrero:2017bxn} can be applied also when
+standard acceptance cuts ($p_t^{\ell}>20 \,\,\mathrm{GeV}$ and
+ $|\eta^{\ell}| < 2.5$) are imposed on both charged leptons.
+
+The coherent sum of  OSP polarized amplitudes differs from the full result by about 2\%.
+The interference among polarizations is generally small. 
+ 
+The distributions obtained from the incoherent sum of three OSP distributions agree  well with the full 
+result for variables which do not depend on the $W$ decay products.
+The individual polarizations are not affected equally by the cuts. Typically, the cross section for right--
+handed $W$'s 
+is reduced the most, followed by the cross section for longitudinally polarized $W$'s. Left--handed $W$ 
+bosons seem to be the least sensitive to acceptance cuts.
+
+The full angular distribution, Figure~\ref{fig:distrib_thetal_lepcut},
+is approximated within a few percent, over the full range, by the sum of the 
+unpolarized distributions. 
+The exact result, shown by the black histogram, however, is not of the form of eEuation~\ref{eq:dcdist}.
+This becomes clear expanding the full result on the first three Legendre polynomials,
+which yields the blue, green and orange smooth 
+curves in Figure~\ref{fig:distrib_thetal_polfrac_lepcut}. Their sum is the smooth black curve which fails to describe 
+the correct distribution.
+Even in the presence of cuts, the fraction of longitudinally polarized $W^-$'s is well above 10\%.
+
+The fact that the exact distribution is well described by the incoherent sum of the polarized differential 
+distributions
+allows for a measurement of the polarization fractions, within a single model,
+even in the presence of cuts on the charged 
+leptons, using Montecarlo templates for the fit. 
+
+This analysis demonstrates that it is possible to study the polarisation of massive gauge
+bosons in a well defined set-up for vector-boson scattering processes. The  method has been 
+implemented in the code Phantom \cite{Ballestrero:2007xq}.
+
 
 \subsection{Effective Field theory for vector-boson scattering}
 % I. Brivio
