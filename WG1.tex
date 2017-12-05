@@ -127,8 +127,7 @@ a quantitative comparison of these programs, both to cross-validate results and 
 In fact, already at LO, when considering the process ${\rm p}{\rm p}\to\mu^+\nu_\mu{\rm e}^+\nu_{\rm e}{\rm j}{\rm j}$ at order $\mathcal O (\alpha^6)$, the various implementations of VBS simulations are different.
 They differ, for example,
 by the (non-)inclusion of diagrams with vector bosons in the $s$-channel or by the treatment of interferences between diagrams.
-The reason of these differences is that, 
-when typical signal cuts for VBS are imposed, these effects turn to be small on rates and distributions.
+The reason of these differences is that, when typical signal cuts for VBS are imposed, these effects turn out to be small on rates and distributions.
 
 In the comparison, the following codes are used: 
 
@@ -168,7 +167,7 @@ For the VBS processes all matrix elements are being provided by a previous versi
 
   \item The program {\sc Recola+MoCaNLO} is made of a flexible Monte Carlo program dubbed {\sc MoCaNLO}~\cite{MoCaNLO} and the general matrix element generator {\sc Recola} \cite{Actis:2012qn,Actis:2016mpe}.
 To numerically evaluate the one-loop scalar and tensor integrals, {\sc Recola} relies on the {\sc Collier} library \cite{Denner:2014gla,Denner:2016kdg},
-These tools have been successfully used for the computation of NLO corrections for VBS~\cite{Biedermann:2016yds,Biedermann:2017bss}.
+These tools have been successfully used for the computation of the full NLO corrections for VBS~\cite{Biedermann:2016yds,Biedermann:2017bss}.
 
   \item {\sc VBFNLO}~\cite{Arnold:2008rz, Arnold:2011wj, Baglio:2014uba} is a flexible
 parton-level Monte Carlo for processes with electroweak bosons. It
@@ -222,7 +221,7 @@ In Table~\ref{tab:wg1_codes} the details of the various codes are reported. In p
 We simulate VBS production at the LHC, with a center-of-mass energy $\sqrt s = 13 \TeV$. We assume five massless flavours in the proton, and employ the NNPDF~3.0 parton 
 density~\cite{Ball:2014uwa}
 with NLO QCD evolution (the {\tt lhaid} in LHAPDF6~\cite{Buckley:2014ana} for this set is 260000) and strong coupling constant $\alpha_s\left( \MZ \right) = 0.118$. Since
-the employed PDF set has no photonic density, photon-induced processes are not considered. Initial-state collinear singularity are factorised with the  ${\overline{\rm MS}}$ 
+the employed PDF set has no photonic density, photon-induced processes are not considered. Initial-state collinear singularities are factorised with the  ${\overline{\rm MS}}$ 
 scheme, consistently with what is done in NNPDF.\\
 We use the following values for the mass and width of the massive particles:
 % 
@@ -323,10 +322,10 @@ computed with the different codes used in this comparison. The inset shows the r
 In Table~\ref{tab:wg1_LOrates} we report the total rates at LO accuracy obtained with the set-up described above, and in Figure~\ref{fig:wg1_mjj-llLO} we show the results
 for the tagging-jet (left) and lepton-pair (right) invariant-mass distribution. In both case we show the absolute distributions in the main frame of the 
 figures, while in the inset the ratio over {\sc VBFNLO} is displayed. For both observables we find 
-an excellent agreement among the various tools, which confirms the fact
-that contributions from $s-$channel diagrams as well as from non-resonant configurations are strongly suppressed in the fiducial region.
+a relatively good agreement among the various tools, which confirms the fact
+that contributions from $s$-channel diagrams as well as from non-resonant configurations are strongly suppressed in the fiducial region.
 At NLO, rates show slightly larger discrepancies, as it can be observed in Table~\ref{tab:wg1_NLOrates}. This is most likely due to low dijet invariant-mass configurations, where
-$s-$channel diagrams and interferences are less suppressed than at LO, because of the presence of extra QCD radiation.
+$s$-channel diagrams and interferences are less suppressed than at LO, because of the presence of extra QCD radiation.
 
 We conclude this section by recalling that the results presented must be regarded as preliminary.
 In the coming months, this work will be enlarged to include comparison of predictions at NLO QCD matched to parton shower or with EW corrections, 
